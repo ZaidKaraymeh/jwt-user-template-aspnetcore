@@ -17,11 +17,10 @@ namespace Ticketing.Repository
         {
             try
             {
-                _dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[User] ON");
                 _dbContext.Users.Add(user);
+                //_dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[User] ON");
                 _dbContext.SaveChanges();
-                _dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[User] OFF");
-
+                //_dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[User] OFF");
 
             }
             catch

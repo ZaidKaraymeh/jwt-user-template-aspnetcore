@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "d560182a-8eb5-47c7-bd36-75a05fb26325",
+		"name": "JWTTEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"luayosama@gmail.com\",\r\n    \"password\":\"TestCase12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7063/api/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlZTMxNzY3Yy1iMGY3LTQwNWQtYmI5Yi0yMzQ1OWNiYTNhN2IiLCJpYXQiOiI3LzExLzIwMjIgNToyODozNiBQTSIsIklkIjoiMiIsIlVzZXJuYW1lIjoiTHVheSIsIkVtYWlsIjoibHVheW9zYW1hQGdtYWlsLmNvbSIsIkNyZWF0ZWREYXRlIjoiNi8zMC8yMDE0IDEyOjAwOjAwIEFNIiwiZXhwIjoxNjU3NTYyMzE2LCJpc3MiOiJKV1RBdXRoZW50aWNhdGlvblNlcnZlciIsImF1ZCI6IkpXVFNlcnZpY2VQb3N0bWFuQ2xpZW50In0.KV7twnHoJquL-0eAbz4bNJaD_T182otx37EpBAHfJv4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7063/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlZTMxNzY3Yy1iMGY3LTQwNWQtYmI5Yi0yMzQ1OWNiYTNhN2IiLCJpYXQiOiI3LzExLzIwMjIgNToyODozNiBQTSIsIklkIjoiMiIsIlVzZXJuYW1lIjoiTHVheSIsIkVtYWlsIjoibHVheW9zYW1hQGdtYWlsLmNvbSIsIkNyZWF0ZWREYXRlIjoiNi8zMC8yMDE0IDEyOjAwOjAwIEFNIiwiZXhwIjoxNjU3NTYyMzE2LCJpc3MiOiJKV1RBdXRoZW50aWNhdGlvblNlcnZlciIsImF1ZCI6IkpXVFNlcnZpY2VQb3N0bWFuQ2xpZW50In0.KV7twnHoJquL-0eAbz4bNJaD_T182otx37EpBAHfJv4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7063/api/user/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"api",
+						"user",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlZTMxNzY3Yy1iMGY3LTQwNWQtYmI5Yi0yMzQ1OWNiYTNhN2IiLCJpYXQiOiI3LzExLzIwMjIgNToyODozNiBQTSIsIklkIjoiMiIsIlVzZXJuYW1lIjoiTHVheSIsIkVtYWlsIjoibHVheW9zYW1hQGdtYWlsLmNvbSIsIkNyZWF0ZWREYXRlIjoiNi8zMC8yMDE0IDEyOjAwOjAwIEFNIiwiZXhwIjoxNjU3NTYyMzE2LCJpc3MiOiJKV1RBdXRoZW50aWNhdGlvblNlcnZlciIsImF1ZCI6IkpXVFNlcnZpY2VQb3N0bWFuQ2xpZW50In0.KV7twnHoJquL-0eAbz4bNJaD_T182otx37EpBAHfJv4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"khalid\",\r\n  \"email\": \"khalid@gmail.com\",\r\n  \"password\": \"TestCase12\",\r\n  \"createdDate\": \"2022-07-11T17:00:41.754Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7063/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmN2U2Yzk1ZS00YmQ1LTQxMzQtYTJiYy0xNDBjMzU3NzNhM2UiLCJpYXQiOiI3LzExLzIwMjIgNToyNDowOSBQTSIsIklkIjoiMiIsIlVzZXJuYW1lIjoiTHVheSIsIkVtYWlsIjoibHVheW9zYW1hQGdtYWlsLmNvbSIsIkNyZWF0ZWREYXRlIjoiNi8zMC8yMDE0IDEyOjAwOjAwIEFNIiwiZXhwIjoxNjU3NTYyMDQ5LCJpc3MiOiJKV1RBdXRoZW50aWNhdGlvblNlcnZlciIsImF1ZCI6IkpXVFNlcnZpY2VQb3N0bWFuQ2xpZW50In0.9jemAyDtTstaK1hZdj0vajLX7vQzk8OXO-_w1pZ-_wI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 10,\r\n  \"username\": \"AhmedUpdated\",\r\n  \"email\": \"ahmed@gmail.com\",\r\n  \"password\": \"TestCase12\",\r\n  \"createdDate\": \"2022-07-11T17:00:41.754Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7063/api/user/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"api",
+						"user",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmN2U2Yzk1ZS00YmQ1LTQxMzQtYTJiYy0xNDBjMzU3NzNhM2UiLCJpYXQiOiI3LzExLzIwMjIgNToyNDowOSBQTSIsIklkIjoiMiIsIlVzZXJuYW1lIjoiTHVheSIsIkVtYWlsIjoibHVheW9zYW1hQGdtYWlsLmNvbSIsIkNyZWF0ZWREYXRlIjoiNi8zMC8yMDE0IDEyOjAwOjAwIEFNIiwiZXhwIjoxNjU3NTYyMDQ5LCJpc3MiOiJKV1RBdXRoZW50aWNhdGlvblNlcnZlciIsImF1ZCI6IkpXVFNlcnZpY2VQb3N0bWFuQ2xpZW50In0.9jemAyDtTstaK1hZdj0vajLX7vQzk8OXO-_w1pZ-_wI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7063/api/user/11",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"api",
+						"user",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
